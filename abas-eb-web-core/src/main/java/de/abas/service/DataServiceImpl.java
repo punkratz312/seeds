@@ -1,10 +1,13 @@
 package de.abas.service;
 
-import org.springframework.stereotype.Service;
+import lombok.Value;
 
-@Service
-public class DataServiceImpl implements DataService {
-    public String foo22() {
-        return "foo22" + System.currentTimeMillis();
-    }
+@Value
+class DataServiceImpl implements DataService {
+
+	private final String criteria;
+
+	public String foo22() {
+		return String.format("foo22### criteria: %s, time: %d", criteria, System.currentTimeMillis());
+	}
 }

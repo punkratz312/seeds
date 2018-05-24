@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Spring Boot Thymeleaf Hello World Example</title>
+  <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.1.0/css/bootstrap.min.css"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">Navbar</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Link</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <h1>Spring Boot Web Thymeleaf Example</h1>
+  <h2>
+    <span th:text="${message}"></span>
+  </h2>
+</div>
+</body>
+</html>

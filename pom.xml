@@ -6,9 +6,9 @@
     <groupId>de.abas</groupId>
     <artifactId>abas-eb-web</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <modules>
         <module>abas-eb-web-core</module>
         <module>abas-eb-web-ui</module>
     </modules>
-    <packaging>pom</packaging>
 </project>
