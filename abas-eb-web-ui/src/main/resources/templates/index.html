@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.1.0/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="webjars/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
+  <link rel="stylesheet" th:href="@{/custom.css}"/>
+</head>
+<body>
+<div class="container-fluid border-bold p-3">
+  <div th:replace="fragments/header"></div>
+  <div class="bg-danger">foo</div>
+  <div th:replace="fragments/footer"></div>
+</div>
+</body>
+</html>

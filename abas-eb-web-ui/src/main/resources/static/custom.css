@@ -1,0 +1,15 @@
+.border {
+    border: 1px solid #1BBAA5 !important;
+}
+
+.border-bold {
+    border: 5px solid #1BBAA5;
+}
+
+.border-bold-bottom {
+    border-bottom: 5px solid #1BBAA5;
+}
+
+.btn {
+    border: 1px solid #1BBAA5;
+}
