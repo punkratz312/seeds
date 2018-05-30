@@ -1,10 +1,24 @@
 package de.abas.service;
 
+import lombok.Value;
 import org.springframework.stereotype.Component;
+
+import java.util.Collection;
+import java.util.Map;
 
 public interface DataService {
 
-    String foo22();
+    Collection<Item> items();
+
+    @Value
+    class Item {
+
+        Map<String, Object> properties;
+
+        public Object getProperty(String key) {
+            return properties.get(key);
+        }
+    }
 
     @Component
     class Factory {
@@ -13,5 +27,4 @@ public interface DataService {
             return new DataServiceImpl(criteria);
         }
     }
-
 }
