@@ -12,6 +12,8 @@
 
 .btn {
     border: 1px solid #1BBAA5;
+    white-space: normal !important;
+    word-wrap: break-word;
 }
 
 .btn:hover {
