@@ -1,6 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <body>
-actions
+<div class="row">
+  <div class="col">
+    <button class="btn btn-light btn-block" th:text="#{action.prepare}"></button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-light btn-block" th:text="#{action.start}"></button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-light btn-block" th:text="#{action.partialAcknowledgment}"></button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-light btn-block" th:text="#{action.totalAcknowledgment}"></button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-light btn-block" th:text="#{action.break}"></button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-light btn-block" th:text="#{action.cancel}"></button>
+  </div>
+</div>
 </body>
 </html>

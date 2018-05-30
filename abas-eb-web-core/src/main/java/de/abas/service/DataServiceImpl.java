@@ -14,25 +14,45 @@ class DataServiceImpl implements DataService {
     public Collection<Item> items() {
         return List.of(
                 new Item(Map.of(
-                        "foo", criteria + " - " + System.currentTimeMillis(),
-                        "bar", criteria + " - " + System.currentTimeMillis(),
-                        "baz", criteria + " - " + System.currentTimeMillis())),
+                        "foo1", criteria + " - " + System.currentTimeMillis(),
+                        "foo2", criteria,
+                        "foo3", criteria,
+                        "foo4", criteria,
+                        "foo5", criteria,
+                        "foo6", criteria,
+                        "foo7", criteria + " - " + System.currentTimeMillis())),
                 new Item(Map.of(
-                        "foo", criteria + " - " + System.currentTimeMillis(),
-                        "bar", criteria + " - " + System.currentTimeMillis(),
-                        "baz", criteria + " - " + System.currentTimeMillis())),
+                        "foo1", criteria + " - " + System.currentTimeMillis(),
+                        "foo2", criteria,
+                        "foo3", criteria,
+                        "foo4", criteria,
+                        "foo5", criteria,
+                        "foo6", criteria,
+                        "foo7", criteria + " - " + System.currentTimeMillis())),
                 new Item(Map.of(
-                        "foo", criteria + " - " + System.currentTimeMillis(),
-                        "bar", criteria + " - " + System.currentTimeMillis(),
-                        "baz", criteria + " - " + System.currentTimeMillis())),
+                        "foo1", criteria + " - " + System.currentTimeMillis(),
+                        "foo2", criteria,
+                        "foo3", criteria,
+                        "foo4", criteria,
+                        "foo5", criteria,
+                        "foo6", criteria,
+                        "foo7", criteria + " - " + System.currentTimeMillis())),
                 new Item(Map.of(
-                        "foo", criteria + " - " + System.currentTimeMillis(),
-                        "bar", criteria + " - " + System.currentTimeMillis(),
-                        "baz", criteria + " - " + System.currentTimeMillis())),
+                        "foo1", criteria + " - " + System.currentTimeMillis(),
+                        "foo2", criteria,
+                        "foo3", criteria,
+                        "foo4", criteria,
+                        "foo5", criteria,
+                        "foo6", criteria,
+                        "foo7", criteria + " - " + System.currentTimeMillis())),
                 new Item(Map.of(
-                        "foo", criteria + " - " + System.currentTimeMillis(),
-                        "bar", criteria + " - " + System.currentTimeMillis(),
-                        "baz", criteria + " - " + System.currentTimeMillis())));
+                        "foo1", criteria + " - " + System.currentTimeMillis(),
+                        "foo2", criteria,
+                        "foo3", criteria,
+                        "foo4", criteria,
+                        "foo5", criteria,
+                        "foo6", criteria,
+                        "foo7", criteria + " - " + System.currentTimeMillis())));
     }
 
 }

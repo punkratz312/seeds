@@ -13,3 +13,12 @@
 .btn {
     border: 1px solid #1BBAA5;
 }
+
+.btn:hover {
+    background-color: #1BBAA5;
+    color: white;
+}
+
+.badge-primary {
+    background-color: #1BBAA5;
+}
