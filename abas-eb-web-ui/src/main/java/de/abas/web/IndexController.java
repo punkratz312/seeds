@@ -22,16 +22,18 @@ public class IndexController {
     @GetMapping
     public String index(Map<String, Object> model) {
         model.put("properties", List.of("foo", "bar", "baz", "article"));
-        model.put("items", List.of(new Item("1", "2", "3", "4"), new Item("11", "22", "33", "44")));
+        model.put("items", List.of(new Item(Map.of("foo", "bar"))));
         model.put("foo22", factory.create("42").foo22());
         return "index";
     }
 
     @Value
     private class Item {
-        String foo;
-        String bar;
-        String baz;
-        String article;
+
+        Map<String, Object> properties;
+
+        public Object getProperty(String key) {
+            return properties.get(key);
+        }
     }
 }
