@@ -2,8 +2,8 @@ package de.abas.web;
 
 import de.abas.service.DataService;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,16 +18,19 @@ public class IndexController {
 
     @Autowired
     private final DataService.Factory factory;
+    
+    @Value("${item.properties}")
+    private String[] properties;
 
     @GetMapping
     public String index(Map<String, Object> model) {
-        model.put("properties", List.of("foo", "bar", "baz", "article"));
+        model.put("properties", properties);
         model.put("items", List.of(new Item(Map.of("foo", "bar"))));
         model.put("foo22", factory.create("42").foo22());
         return "index";
     }
 
-    @Value
+    @lombok.Value
     private class Item {
 
         Map<String, Object> properties;
