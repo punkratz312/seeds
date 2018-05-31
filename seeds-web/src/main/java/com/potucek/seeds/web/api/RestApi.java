@@ -1,6 +1,7 @@
-package de.abas.web.api;
+package com.potucek.seeds.web.api;
 
-import de.abas.service.DataService;
+import com.potucek.seeds.Seeds;
+import com.potucek.seeds.service.SeedService;
 import lombok.Value;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,11 +16,11 @@ import java.util.Collection;
 public class RestApi {
 
     @Autowired
-    private final DataService dataService;
+    private final SeedService seedService;
 
     @GetMapping
-    public Collection<DataService.Item> example() {
-        return dataService.items();
+    public Collection<Seeds> example() {
+        return seedService.seeds();
     }
 
 }

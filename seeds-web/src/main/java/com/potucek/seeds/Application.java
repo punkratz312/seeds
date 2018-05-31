@@ -1,4 +1,4 @@
-package de.abas;
+package com.potucek.seeds;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

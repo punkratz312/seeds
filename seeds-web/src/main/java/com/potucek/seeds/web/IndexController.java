@@ -1,9 +1,8 @@
-package de.abas.web;
+package com.potucek.seeds.web;
 
-import de.abas.service.DataService;
+import com.potucek.seeds.service.SeedService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,15 +15,11 @@ import java.util.Map;
 public class IndexController {
 
     @Autowired
-    private final DataService dataService;
-
-    @Value("${item.properties}")
-    private String[] properties;
+    private final SeedService seedService;
 
     @GetMapping
     public String index(Map<String, Object> model) {
-        model.put("properties", properties);
-        model.put("items", dataService.items());
+        model.put("seeds", seedService.seeds());
         return "index";
     }
 

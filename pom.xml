@@ -3,12 +3,32 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>de.abas</groupId>
-    <artifactId>abas-eb-web</artifactId>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.2.RELEASE</version>
+    </parent>
+    <groupId>com.potucek</groupId>
+    <artifactId>seeds</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>abas-eb-web-core</module>
-        <module>abas-eb-web-ui</module>
+        <module>seeds-core</module>
+        <module>seeds-web</module>
     </modules>
+    <properties>
+        <maven.compiler.target>1.10</maven.compiler.target>
+        <maven.compiler.source>1.10</maven.compiler.source>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.22</version>
+        </dependency>
+    </dependencies>
 </project>
