@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <body>
-<div class="table-responsive">
-  <table class="table table-striped">
-    <tr>
-      <th th:each="property : ${seeds.properties}" th:text="${property}"></th>
-    </tr>
-    <tr th:each="seed : ${seeds.seeds}">
-      <td th:each="property : ${seeds.properties}" th:text="${seed.get(property)}"></td>
-    </tr>
-  </table>
+<div th:each="seed : ${seeds}">
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <tr>
+        <th th:each="property : ${seed.properties}" th:text="${property}"></th>
+      </tr>
+      <td th:each="property : ${seed.properties}" th:text="${seed.get(property)}"></td>
+    </table>
+  </div>
 </div>
 </body>
 </html>
